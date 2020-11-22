@@ -15,7 +15,6 @@
 		$folder		= $folders[$extension];
 		$file		= implode(array(
 			preg_replace('/^(.+)\..+$/i', '$1', $filename),
-			filemtime(dirname(__FILE__).'/'.$folder.$filename),
 			$extension
 			), '.');
 		return $root.$folder.$file;
