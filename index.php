@@ -43,7 +43,7 @@
 <body>
     <ul>
     <?php
-    $versions = array_diff(scandir(__DIR__), array('.', '..', 'index.php'));
+    $versions = array_diff(scandir(__DIR__), array('.', '..', '.git', 'index.php'));
     foreach ($versions as $version) {
         if (is_dir($version)) {
             printf('<li><a href="/%s">%s</a></li>', $version, $version);
